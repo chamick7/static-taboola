@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="text/javascript">
+      // A *global* property for queuing *all* Taboola commands on this page:
+      window._taboola = window._taboola || [];
+
+      // Fill in the page type, as provided by Taboola:
+      _taboola.push({ article: "auto" });
+
+      !(function (e, f, u, i) {
+        if (!document.getElementById(i)) {
+          e.async = 1;
+          e.src = u;
+          e.id = i;
+          f.parentNode.insertBefore(e, f);
+        }
+        // Fill in your Publisher ID (an alphabetic string, as provided by Taboola):
+      })(
+        document.createElement("script"),
+        document.getElementsByTagName("script")[0],
+        "//cdn.taboola.com/libtrc/ndtv/loader.js",
+        "tb_loader_script"
+      );
+
+      if (window.performance && typeof window.performance.mark == "function") {
+        window.performance.mark("tbl_ic");
+      }
+    </script>
+    <title>static taboola</title>
+  </head>
+  <body>
+    <div id="taboola-below-article-thumbnails"></div>
+    <script type="text/javascript">
+      window._taboola = window._taboola || [];
+
+      _taboola.push({
+        mode: "thumbnails-a",
+        container:
+          "taboola-below-article-thumbnails" /* The ID of the <div> container (e.g. 'taboola-below-article-thumbnails') */,
+        placement: "Below Article Thumbnails",
+        target_type: "mix",
+      });
+    </script>
+    <script type="text/javascript">
+      // A global queue for all Taboola commands on the page
+      window._taboola = window._taboola || [];
+
+      _taboola.push({ flush: true });
+    </script>
+  </body>
+</html>
